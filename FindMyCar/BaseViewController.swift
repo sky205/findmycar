@@ -95,17 +95,27 @@ class BaseViewController: UIViewController {
             self.waitingController?.message = message;
             self.addChildViewController(self.waitingController!);
             self.view.addSubview(self.waitingController!.view);
+            self.waitingController?.view.alpha = 0;
             self.waitingController?.startShowMessage();
+            
+            UIView.animate(withDuration: 0.5, animations: { 
+                self.waitingController?.view.alpha = 1;
+            })
+            
         }
     }
     
     
     func closeWaitingView() {
-        self.waitingController?.viewWillDisappear(false);
-        self.waitingController?.view.removeFromSuperview();
-        self.waitingController?.removeFromParentViewController();
-        self.waitingController?.didMove(toParentViewController: self);
-        self.waitingController = nil;
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.waitingController?.view.alpha = 0;
+        }) { (complete) in
+            self.waitingController?.viewWillDisappear(false);
+            self.waitingController?.view.removeFromSuperview();
+            self.waitingController?.removeFromParentViewController();
+            self.waitingController?.didMove(toParentViewController: self);
+            self.waitingController = nil;
+        }
     }
     
     
