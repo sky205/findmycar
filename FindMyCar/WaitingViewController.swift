@@ -33,7 +33,7 @@ class WaitingViewController: UIViewController {
             showString += ".";
         }
         self.textLabel.text = showString;
-        self.executeNumric = self.executeNumric > 3 ? 0 : self.executeNumric+1;
+        self.executeNumric = self.executeNumric >= 3 ? 0 : self.executeNumric+1;
     }
     
     override func viewWillDisappear(_ animated: Bool) {
