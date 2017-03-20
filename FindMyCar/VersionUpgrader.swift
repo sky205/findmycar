@@ -20,9 +20,10 @@ class VersionUpgrader: NSObject {
         "1_1"
     ];
     
-    private var versionFunc = [
-        "": ""
-    ];
+    private var versionIdentify: String = "VersionUpgradeRecord";
+    private var versionFunc: [String: Selector] = [String: Selector]();
+    private var lastVersion: String?
+    
     
     var isFinishUpgrade: Bool = true;
     
@@ -33,8 +34,17 @@ class VersionUpgrader: NSObject {
     }
     
     func startVersionUpgrade() {
-        
+        if let version = self.lastVersion, let index = self.versionList.index(of: version), index < self.versionList.count-1,
+           let selector = self.versionFunc[self.versionList[index+1]] {
+            Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: selector, userInfo: nil, repeats: false);
+        }
     }
+    
+    private func createSelector() {
+        let v1_1 = #selector(self.updateForVersion1_1);
+        self.versionFunc["1_1"] = v1_1;
+    }
+    
     
     private func createDBIfNeeded() {
         let manager = FileManager.default;
@@ -53,10 +63,24 @@ class VersionUpgrader: NSObject {
     }
     
     private func finishedUpgrade(for version: String) {
-        
+        var saveList: [String] = [String]();
+        if let list = IPHONE.userDefault.array(forKey: self.versionIdentify) as? [String] {
+            saveList = list;
+        }
+        saveList.append(version);
+        IPHONE.userDefault.set(saveList, forKey: self.versionIdentify);
+        IPHONE.userDefault.synchronize();
+        self.lastVersion = version;
+    }
+    
+    private func goLastUpgradeIfNeeded(version: String) {
+        self.startVersionUpgrade();
     }
     
     private func getLastUpgradeVersion() -> String? {
+        if let list = IPHONE.userDefault.array(forKey: self.versionIdentify) {
+            return list.last as? String;
+        }
         return nil;
     }
     
