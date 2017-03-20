@@ -27,6 +27,11 @@
 		9254894E1E71A8C800B1B17B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254894D1E71A8C800B1B17B /* BaseTableViewController.swift */; };
 		925489511E71A90C00B1B17B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925489501E71A90C00B1B17B /* BaseCell.swift */; };
 		925489531E71AE4400B1B17B /* DDConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925489521E71AE4400B1B17B /* DDConnect.swift */; };
+		9268558C1E80114800065EA2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268558B1E80114800065EA2 /* Extension.swift */; };
+		9268558E1E80115500065EA2 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268558D1E80115500065EA2 /* URL.swift */; };
+		926855901E80116000065EA2 /* IPHONE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268558F1E80116000065EA2 /* IPHONE.swift */; };
+		926855921E80186300065EA2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926855911E80186300065EA2 /* CustomView.swift */; };
+		926855951E801A7E00065EA2 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926855941E801A7E00065EA2 /* BaseCollectionViewController.swift */; };
 		92A9D6A31E782BDD007176AB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9D6A21E782BDD007176AB /* LocationViewController.swift */; };
 		92AF7B2E1E72F8A500318DFE /* DDImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7B2D1E72F8A500318DFE /* DDImagePickerController.swift */; };
 		92AF7B301E72FD3800318DFE /* BaseCol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7B2F1E72FD3800318DFE /* BaseCol.swift */; };
@@ -147,6 +152,11 @@
 		9254894D1E71A8C800B1B17B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		925489501E71A90C00B1B17B /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		925489521E71AE4400B1B17B /* DDConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDConnect.swift; sourceTree = "<group>"; };
+		9268558B1E80114800065EA2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9268558D1E80115500065EA2 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		9268558F1E80116000065EA2 /* IPHONE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPHONE.swift; sourceTree = "<group>"; };
+		926855911E80186300065EA2 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		926855941E801A7E00065EA2 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		92A9D6A21E782BDD007176AB /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		92AF7B2D1E72F8A500318DFE /* DDImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDImagePickerController.swift; sourceTree = "<group>"; };
 		92AF7B2F1E72FD3800318DFE /* BaseCol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCol.swift; sourceTree = "<group>"; };
@@ -198,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				9222FAFE1E798F570000D22A /* BorderView.swift */,
+				926855911E80186300065EA2 /* CustomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 		925489131E718CBF00B1B17B /* FindMyCar */ = {
 			isa = PBXGroup;
 			children = (
+				9268558A1E80113900065EA2 /* Macro */,
 				9254894C1E71A79F00B1B17B /* Support Files */,
 				925489471E71A76600B1B17B /* Views */,
 				925489461E71A75D00B1B17B /* Framework */,
@@ -309,15 +321,13 @@
 		9254894B1E71A77E00B1B17B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				926855931E801A4100065EA2 /* Basic */,
 				9222FAB61E7978380000D22A /* HomeViewController.swift */,
 				925489161E718CBF00B1B17B /* ViewController.swift */,
 				9222FABA1E79795A0000D22A /* RecordController.swift */,
-				925489421E71A03500B1B17B /* BaseViewController.swift */,
-				9254894D1E71A8C800B1B17B /* BaseTableViewController.swift */,
 				92AF7B2D1E72F8A500318DFE /* DDImagePickerController.swift */,
 				92A9D6A21E782BDD007176AB /* LocationViewController.swift */,
 				9222FAB81E79792E0000D22A /* NewRecordController.swift */,
-				9222FAFB1E798D080000D22A /* WaitingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -325,6 +335,7 @@
 		9254894C1E71A79F00B1B17B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				926855831E80113400065EA2 /* New Group */,
 				9222FAF71E7986DB0000D22A /* mycar.db */,
 				925489201E718CC000B1B17B /* Info.plist */,
 				9254891B1E718CC000B1B17B /* Assets.xcassets */,
@@ -340,6 +351,34 @@
 				92AF7B311E72FD4400318DFE /* ImagePickerCol.swift */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		926855831E80113400065EA2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		9268558A1E80113900065EA2 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				9268558B1E80114800065EA2 /* Extension.swift */,
+				9268558D1E80115500065EA2 /* URL.swift */,
+				9268558F1E80116000065EA2 /* IPHONE.swift */,
+			);
+			name = Macro;
+			sourceTree = "<group>";
+		};
+		926855931E801A4100065EA2 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				925489421E71A03500B1B17B /* BaseViewController.swift */,
+				9254894D1E71A8C800B1B17B /* BaseTableViewController.swift */,
+				9222FAFB1E798D080000D22A /* WaitingViewController.swift */,
+				926855941E801A7E00065EA2 /* BaseCollectionViewController.swift */,
+			);
+			name = Basic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,17 +585,22 @@
 				9222FAFA1E7987150000D22A /* VersionUpgrader.swift in Sources */,
 				925489171E718CBF00B1B17B /* ViewController.swift in Sources */,
 				9222FAFF1E798F570000D22A /* BorderView.swift in Sources */,
+				926855921E80186300065EA2 /* CustomView.swift in Sources */,
 				925489151E718CBF00B1B17B /* AppDelegate.swift in Sources */,
 				9222FAFC1E798D080000D22A /* WaitingViewController.swift in Sources */,
 				92AF7B321E72FD4400318DFE /* ImagePickerCol.swift in Sources */,
 				9222FAB91E79792E0000D22A /* NewRecordController.swift in Sources */,
 				9222FABB1E79795A0000D22A /* RecordController.swift in Sources */,
+				9268558C1E80114800065EA2 /* Extension.swift in Sources */,
+				9268558E1E80115500065EA2 /* URL.swift in Sources */,
 				92A9D6A31E782BDD007176AB /* LocationViewController.swift in Sources */,
 				925489531E71AE4400B1B17B /* DDConnect.swift in Sources */,
 				9222FAB71E7978380000D22A /* HomeViewController.swift in Sources */,
 				9254894E1E71A8C800B1B17B /* BaseTableViewController.swift in Sources */,
 				925489511E71A90C00B1B17B /* BaseCell.swift in Sources */,
+				926855951E801A7E00065EA2 /* BaseCollectionViewController.swift in Sources */,
 				925489431E71A03500B1B17B /* BaseViewController.swift in Sources */,
+				926855901E80116000065EA2 /* IPHONE.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
